@@ -8,11 +8,16 @@
 
 import Foundation
 
-struct Post: Decodable {
+struct Post: Codable {
     
-    let author: String
+    let id: Int
     let message: String
+    let author: String
     
-    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case author = "author"
+        case message = "message"
+    }
     
 }

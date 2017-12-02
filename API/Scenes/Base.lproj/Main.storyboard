@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tPj-41-TSd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tPj-41-TSd">
                                 <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -85,15 +85,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="oBT-Tx-mAh">
+                                <rect key="frame" x="169" y="325.5" width="37" height="37"/>
+                                <color key="color" red="0.25365788501060704" green="0.2333658409748558" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="oBT-Tx-mAh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="22q-8m-NnI"/>
                             <constraint firstItem="85e-Z1-csq" firstAttribute="leading" secondItem="w7g-IN-O1V" secondAttribute="trailing" constant="8" id="8h3-FF-PLf"/>
                             <constraint firstItem="tPj-41-TSd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Idc-i6-Q5F"/>
                             <constraint firstItem="85e-Z1-csq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="MhU-CK-JuG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="85e-Z1-csq" secondAttribute="trailing" constant="10" id="S5P-jJ-hjP"/>
                             <constraint firstItem="tPj-41-TSd" firstAttribute="top" secondItem="w7g-IN-O1V" secondAttribute="bottom" constant="20" id="S6c-lP-mwZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tPj-41-TSd" secondAttribute="bottom" id="W7I-iX-soR"/>
+                            <constraint firstItem="oBT-Tx-mAh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XFR-iy-Ulh"/>
                             <constraint firstItem="w7g-IN-O1V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YDh-Mj-LqE"/>
                             <constraint firstItem="w7g-IN-O1V" firstAttribute="top" secondItem="OXs-9Q-lSc" secondAttribute="bottom" constant="8" id="bTj-xn-GnJ"/>
                             <constraint firstItem="OXs-9Q-lSc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="14" id="dgM-Bu-Xwd"/>
@@ -105,6 +111,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="pwy-fe-57R"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="oBT-Tx-mAh" id="tIB-7r-ekv"/>
                         <outlet property="authorTextField" destination="OXs-9Q-lSc" id="dc4-pP-oWY"/>
                         <outlet property="messageTextField" destination="w7g-IN-O1V" id="sR4-Ek-dOi"/>
                         <outlet property="tableView" destination="tPj-41-TSd" id="GcP-5y-LuE"/>
