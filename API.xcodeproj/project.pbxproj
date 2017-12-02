@@ -12,6 +12,9 @@
 		111BD5841FD24D2300F29D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111BD5821FD24D2300F29D35 /* Main.storyboard */; };
 		111BD5861FD24D2300F29D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111BD5851FD24D2300F29D35 /* Assets.xcassets */; };
 		111BD5891FD24D2300F29D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111BD5871FD24D2300F29D35 /* LaunchScreen.storyboard */; };
+		111BD5911FD24E9600F29D35 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BD5901FD24E9600F29D35 /* PostsTableViewCell.swift */; };
+		111BD5931FD24ED800F29D35 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BD5921FD24ED800F29D35 /* Post.swift */; };
+		111BD5971FD2555A00F29D35 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111BD5961FD2555A00F29D35 /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		111BD5851FD24D2300F29D35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		111BD5881FD24D2300F29D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		111BD58A1FD24D2300F29D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		111BD5901FD24E9600F29D35 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		111BD5921FD24ED800F29D35 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		111BD5961FD2555A00F29D35 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,33 @@
 		111BD57D1FD24D2300F29D35 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				111BD57E1FD24D2300F29D35 /* AppDelegate.swift */,
-				111BD5801FD24D2300F29D35 /* ViewController.swift */,
+				111BD5941FD24EF400F29D35 /* Scenes */,
+				111BD5951FD24F0000F29D35 /* Supporting Files */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		111BD5941FD24EF400F29D35 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
 				111BD5821FD24D2300F29D35 /* Main.storyboard */,
+				111BD5801FD24D2300F29D35 /* ViewController.swift */,
+				111BD5901FD24E9600F29D35 /* PostsTableViewCell.swift */,
+				111BD5921FD24ED800F29D35 /* Post.swift */,
+				111BD5961FD2555A00F29D35 /* NetworkingManager.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		111BD5951FD24F0000F29D35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				111BD57E1FD24D2300F29D35 /* AppDelegate.swift */,
 				111BD5851FD24D2300F29D35 /* Assets.xcassets */,
 				111BD5871FD24D2300F29D35 /* LaunchScreen.storyboard */,
 				111BD58A1FD24D2300F29D35 /* Info.plist */,
 			);
-			path = API;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111BD5911FD24E9600F29D35 /* PostsTableViewCell.swift in Sources */,
 				111BD5811FD24D2300F29D35 /* ViewController.swift in Sources */,
 				111BD57F1FD24D2300F29D35 /* AppDelegate.swift in Sources */,
+				111BD5971FD2555A00F29D35 /* NetworkingManager.swift in Sources */,
+				111BD5931FD24ED800F29D35 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = API/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/API/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.frelei.API;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = API/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/API/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.frelei.API;
 				PRODUCT_NAME = "$(TARGET_NAME)";
